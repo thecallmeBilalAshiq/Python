@@ -38,10 +38,13 @@ To print
 # import module_name.
 
 
-import pyttsx3               # pip install pyttsx by opening terminal 
-engine = pyttsx3.init()
-engine.say("Hey I am Muhammad Beelal Aashiq")    # robote will call my name 
-engine.runAndWait()
+try:
+     import pyttsx3  # pip install pyttsx3 by opening terminal
+     engine = pyttsx3.init()
+     engine.say("Hey I am Muhammad Beelal Aashiq")  # robot will call my name
+     engine.runAndWait()
+except ImportError:
+     print("pyttsx3 is not installed.")
 
 # -----------------------------------------
 import webbrowser
